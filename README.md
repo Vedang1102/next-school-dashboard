@@ -1,1 +1,1 @@
-# React School Dashboard
+# NEXT Js School Dashboard
