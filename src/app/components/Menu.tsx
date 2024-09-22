@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const menuItems = [
   {
@@ -123,9 +124,9 @@ const Menu = () => {
           <h2 className=''>{menu.title}</h2>
           {menu.items.map((item) => (
             <div key={item.label} className=''>
-              <img src={item.icon} alt={item.label} />
               <Link href={item.href} className=''>
-                {item.label}
+              <Image src={item.icon} alt={item.label} width={20} height={20}/>
+              {item.label}
               </Link>
             </div>
           ))}
