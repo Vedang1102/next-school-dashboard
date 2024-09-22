@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const menuItems = [
   {
     title: "MENU",
@@ -112,3 +114,25 @@ const menuItems = [
     ],
   },
 ];
+
+const Menu = () => {
+  return (
+    <div className='mt-4 text-sm'>
+      {menuItems.map((menu) => (
+        <div key={menu.title} className=''>
+          <h2 className=''>{menu.title}</h2>
+          {menu.items.map((item) => (
+            <div key={item.label} className=''>
+              <img src={item.icon} alt={item.label} />
+              <Link href={item.href} className=''>
+                {item.label}
+              </Link>
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  )
+}
+
+export default Menu
