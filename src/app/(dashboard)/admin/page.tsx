@@ -5,7 +5,7 @@ const AdminPage = () => {
       {/* LEFT */}
       <div className="w-full lg:w-2/3">
         {/* USER CARDS */}
-        <div className="flex gap-4 justify-between">
+        <div className="flex gap-4 justify-between flex-wrap"> {/* flex wrap is used so that the page doesn't overflow on small screens */}
           <UserCard type="student"/>
           <UserCard type="teacher"/>
           <UserCard type="parent"/>
@@ -14,7 +14,7 @@ const AdminPage = () => {
       </div>
       {/* RIGHT */}
       <div className="w-full lg:w-1/3">
-      PAGE
+      RIGHT SECTION
       </div>
     </div>
   )
